@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="tournamentsApp">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <title></title>
+</head>
+<body ng-controller="TournamentListCtrl">
+  <div class="container-fluid">
+    <div class="row">
+      <h1>Tournaments</h1>
+    </div>
+    <div class="row">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number Of Participants</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="tournament in tournaments">
+            <td>{{tournament.name}}</td>
+            <td>{{tournament.participants}}</td>
+            <td>{{tournament.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+  </body>
+  </html>
